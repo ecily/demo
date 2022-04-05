@@ -1,0 +1,17 @@
+<% layout('./layouts/boilerplate') %>
+
+    <h1>Ändere deinen Deal</h1>
+    <form action="/orders/<%=order._id%>?_method=PUT" method="POST">
+        <div>
+            <label for="title">Title: </label>
+            <input type="text" id="title" name="order[title]" value="<%=order.title%>">
+        </div>
+        <div>
+            <label for="location">Location: </label>
+            <input type="text" id="location" name="order[location]" value="<%=order.location%>">
+        </div>
+        <button>Deal ändern</button>
+        <div>
+        <a href="/orders/<%=order._id%>">Zurück</a>
+        </div>
+    </form>

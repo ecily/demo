@@ -1,0 +1,15 @@
+<% layout('./layouts/boilerplate') %>
+
+    <h1><%= order.title %></h1>
+    <h2><%= order.location %></h2>
+    <img src="<%= order.image %>" alt="<%= order.title %>">
+    <p><%= order.description %></p>
+    
+    <footer>
+        <a href="/orders/<%=order._id%>/edit">Edit Deal</a>
+        <p>
+            <form action="/orders/<%=order._id%>?_method=DELETE" method="POST">
+                <button>Löschen</button>
+            </form>
+        </p>
+    </footer>
